@@ -356,14 +356,14 @@ export default function VisitPage({
                   edition === "future"
                     ? withBasePath("/images/trails.webp")
                     : edition === "now"
-                      ? withBasePath("/images/austin.jpg")
+                      ? withBasePath("/images/sanctuarynow.png")
                       : withBasePath("/images/sanctuary.webp")
                 }
                 alt={
                   edition === "future"
                     ? "A sunlit garden path featured in Sanctuary’s vision"
                     : edition === "now"
-                      ? "Austin skyline and Lady Bird Lake at dusk"
+                      ? "Sanctuary under construction at sunset, with the team on site in the Hill Country"
                       : "Architectural rendering illustrating the future vision for Sanctuary"
                 }
                 fill
@@ -373,14 +373,14 @@ export default function VisitPage({
                 {edition === "future"
                   ? "Make a little room to wander."
                   : edition === "now"
-                    ? "A first look at Austin."
+                    ? "See Sanctuary as it’s being built."
                     : "A first look at what’s ahead."}
               </span>
               <small>
                 {edition === "future"
                   ? "Sanctuary vision imagery"
                   : edition === "now"
-                    ? "Austin, Texas · Your trip starts here"
+                    ? "Sanctuary today · Under construction"
                     : "Future vision · Architectural rendering"}
               </small>
             </div>
