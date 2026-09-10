@@ -355,16 +355,12 @@ export default function VisitPage({
                 src={
                   edition === "future"
                     ? withBasePath("/images/trails.webp")
-                    : edition === "now"
-                      ? withBasePath("/images/sanctuarynow.png")
-                      : withBasePath("/images/sanctuary.webp")
+                    : withBasePath("/images/sanctuary.webp")
                 }
                 alt={
                   edition === "future"
                     ? "A sunlit garden path featured in Sanctuary’s vision"
-                    : edition === "now"
-                      ? "Sanctuary under construction at sunset, with the team on site in the Hill Country"
-                      : "Architectural rendering illustrating the future vision for Sanctuary"
+                    : "Architectural rendering illustrating the future vision for Sanctuary"
                 }
                 fill
                 sizes="(max-width: 760px) 100vw, 40vw"
@@ -372,16 +368,12 @@ export default function VisitPage({
               <span>
                 {edition === "future"
                   ? "Make a little room to wander."
-                  : edition === "now"
-                    ? "See Sanctuary as it’s being built."
-                    : "A first look at what’s ahead."}
+                  : "A first look at what’s ahead."}
               </span>
               <small>
                 {edition === "future"
                   ? "Sanctuary vision imagery"
-                  : edition === "now"
-                    ? "Sanctuary today · Under construction"
-                    : "Future vision · Architectural rendering"}
+                  : "Future vision · Architectural rendering"}
               </small>
             </div>
             <div className="itinerary-body" key={stay}>

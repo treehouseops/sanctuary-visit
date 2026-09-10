@@ -41,6 +41,10 @@ const austinImage = {
 export const pageContent: Record<Edition, Content> = {
   now: {
     ...austinImage,
+    heroImage: withBasePath("/images/sanctuarynow.png"),
+    heroAlt:
+      "Sanctuary under construction at sunset, with the team on site in the Hill Country",
+    heroCaption: "Sanctuary today · Under construction",
     heading: "Come for Austin.",
     headingEnd: "Meet what’s next.",
     heroCopy:
