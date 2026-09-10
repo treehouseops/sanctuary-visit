@@ -186,6 +186,9 @@ export const pageContent: Record<Edition, Content> = {
   },
   sxsw: {
     ...austinImage,
+    heroImage: withBasePath("/images/sxsw.png"),
+    heroAlt: "SXSW attendees mingling poolside at a Sanctuary gathering at sunset",
+    heroCaption: "Sanctuary at SXSW · An Austin evening",
     heading: "Here for SXSW?",
     headingEnd: "Meet a different future.",
     heroCopy:
