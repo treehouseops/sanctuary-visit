@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { basePath } from "./base-path";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,6 +19,27 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <style
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{
+            __html: `
+@font-face {
+  font-family: Suisse;
+  src: url("${basePath}/fonts/suisse-regular.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400 700;
+}
+@font-face {
+  font-family: Suisse;
+  src: url("${basePath}/fonts/suisse-light.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 300;
+}
+`,
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );

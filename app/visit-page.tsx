@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { pageContent, type Edition } from "./visit-content";
+import { withBasePath } from "./base-path";
 
 type Stay = "day" | "weekend" | "week";
 const stays: Record<
@@ -203,7 +204,7 @@ export default function VisitPage({
       <header className="header">
         <a href="#" aria-label="Sanctuary home" className="wordmark">
           <Image
-            src="/images/logo.svg"
+            src={withBasePath("/images/logo.svg")}
             width={180}
             height={40}
             priority
@@ -347,8 +348,8 @@ export default function VisitPage({
               <Image
                 src={
                   edition === "future"
-                    ? "/images/trails.webp"
-                    : "/images/sanctuary.webp"
+                    ? withBasePath("/images/trails.webp")
+                    : withBasePath("/images/sanctuary.webp")
                 }
                 alt={
                   edition === "future"
@@ -443,7 +444,7 @@ export default function VisitPage({
         <section id="austin" className="austin section-pad">
           <div className="austin-photo">
             <Image
-              src="/images/austin.jpg"
+              src={withBasePath("/images/austin.jpg")}
               alt="Austin skyline above Lady Bird Lake"
               fill
               sizes="(max-width: 760px) 100vw, 55vw"
@@ -708,7 +709,7 @@ export default function VisitPage({
         <div className="footer-top">
           <a href="#" aria-label="Back to top">
             <Image
-              src="/images/logo.svg"
+              src={withBasePath("/images/logo.svg")}
               width={210}
               height={45}
               alt="Sanctuary"

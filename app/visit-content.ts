@@ -1,3 +1,5 @@
+import { withBasePath } from "./base-path";
+
 export type Edition = "now" | "future" | "sxsw";
 type Itinerary = {
   label: string;
@@ -31,7 +33,7 @@ type Content = {
 };
 
 const austinImage = {
-  heroImage: "/images/austin.jpg",
+  heroImage: withBasePath("/images/austin.jpg"),
   heroAlt: "Austin skyline and Lady Bird Lake at dusk",
   heroCaption: "Austin, Texas · Your trip starts here",
 };
@@ -150,7 +152,7 @@ export const pageContent: Record<Edition, Content> = {
       "Come experience Sanctuary. A day, a weekend, a week. A personal invitation to discover what life here could be.",
     heroCta: "Find your kind of visit",
     navCta: "Plan your visit",
-    heroImage: "/images/sanctuary.webp",
+    heroImage: withBasePath("/images/sanctuary.webp"),
     heroAlt:
       "Sanctuary architectural rendering of a home opening onto a pool and native landscape",
     heroCaption: "A glimpse of the vision · Architectural rendering",
