@@ -355,12 +355,16 @@ export default function VisitPage({
                 src={
                   edition === "future"
                     ? withBasePath("/images/trails.webp")
-                    : withBasePath("/images/sanctuary.webp")
+                    : edition === "now"
+                      ? withBasePath("/images/austin.jpg")
+                      : withBasePath("/images/sanctuary.webp")
                 }
                 alt={
                   edition === "future"
                     ? "A sunlit garden path featured in Sanctuary’s vision"
-                    : "Architectural rendering illustrating the future vision for Sanctuary"
+                    : edition === "now"
+                      ? "Austin skyline and Lady Bird Lake at dusk"
+                      : "Architectural rendering illustrating the future vision for Sanctuary"
                 }
                 fill
                 sizes="(max-width: 760px) 100vw, 40vw"
@@ -368,12 +372,16 @@ export default function VisitPage({
               <span>
                 {edition === "future"
                   ? "Make a little room to wander."
-                  : "A first look at what’s ahead."}
+                  : edition === "now"
+                    ? "A first look at Austin."
+                    : "A first look at what’s ahead."}
               </span>
               <small>
                 {edition === "future"
                   ? "Sanctuary vision imagery"
-                  : "Future vision · Architectural rendering"}
+                  : edition === "now"
+                    ? "Austin, Texas · Your trip starts here"
+                    : "Future vision · Architectural rendering"}
               </small>
             </div>
             <div className="itinerary-body" key={stay}>
