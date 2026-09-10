@@ -185,16 +185,22 @@ export default function VisitPage({
     <div className={`edition edition-${edition}`}>
       <nav className="edition-nav" aria-label="Explore the three invitations">
         <span>Visit Sanctuary</span>
-        <a href="/now" aria-current={edition === "now" ? "page" : undefined}>
+        <a
+          href={withBasePath("/now")}
+          aria-current={edition === "now" ? "page" : undefined}
+        >
           Now
         </a>
         <a
-          href="/future"
+          href={withBasePath("/future")}
           aria-current={edition === "future" ? "page" : undefined}
         >
           Future
         </a>
-        <a href="/sxsw" aria-current={edition === "sxsw" ? "page" : undefined}>
+        <a
+          href={withBasePath("/sxsw")}
+          aria-current={edition === "sxsw" ? "page" : undefined}
+        >
           SXSW
         </a>
       </nav>
